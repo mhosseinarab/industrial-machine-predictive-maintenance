@@ -1,0 +1,158 @@
+/* Reset basic margins and use border-box for easier sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font, background color, and text color for the page */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Center the main content and limit its maximum width */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Style the page header */
+header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Reusable card style for the chart and table sections */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Chart section heading and responsive container */
+.chart-section h2 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    max-height: 360px;
+}
+
+/* Search bar layout and input styling */
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.search-wrapper label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Make the table horizontally scrollable on smaller screens */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    max-height: 600px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+/* Data table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Keep the table header visible while scrolling vertically */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #1e293b;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 14px;
+    border-bottom: 2px solid #0f172a;
+}
+
+tbody td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+/* Add alternating row colors for better readability */
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Highlight a row when the user hovers over it */
+tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+/* Style for the message shown when no search results match */
+.no-results {
+    text-align: center;
+    padding: 24px;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Responsive adjustments for smaller mobile screens */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .card {
+        padding: 14px;
+    }
+}

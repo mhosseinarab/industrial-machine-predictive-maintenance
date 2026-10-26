@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Machine Predictive Maintenance</title>
+    
+    <!-- 1. Load local stylesheet using a relative path -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Load Chart.js library from the jsDelivr CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Main page container -->
+    <div class="container">
+        <header>
+            <h1>Industrial Machine Predictive Maintenance</h1>
+            <p>Dataset overview, failure statistics, and live record search.</p>
+        </header>
+
+        <!-- Section for the bar chart -->
+        <section class="card chart-section">
+            <h2>Records by Failure Type</h2>
+            <div class="chart-wrapper">
+                <canvas id="failureChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Section for the search box and data table -->
+        <section class="card table-section">
+            <div class="search-wrapper">
+                <label for="searchInput">Filter Dataset:</label>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search by machine ID, type, operating mode, failure type..."
+                >
+            </div>
+
+            <!-- Container where table.js will dynamically build the table -->
+            <div id="tableContainer" class="table-container"></div>
+        </section>
+    </div>
+
+    <!-- 2. Load the dataset file first so the global "data" array is available -->
+    <script src="data.js"></script>
+    <!-- 3. Load the script that generates and filters the HTML table -->
+    <script src="table.js"></script>
+    <!-- 4. Load the script that draws the Chart.js bar chart -->
+    <script src="charts.js"></script>
+</body>
+</html>
