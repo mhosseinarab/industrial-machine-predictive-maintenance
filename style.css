@@ -156,3 +156,9 @@ tbody tr:hover {
         padding: 14px;
     }
 }
+
+.result-count {
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: #64748b;
+}
